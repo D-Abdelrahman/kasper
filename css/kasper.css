@@ -205,4 +205,22 @@ ul {
     display: none;
   }
 }
+.home .polb {
+  position: absolute;
+  display: flex;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 40px;
+}
+.home .polb li {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+}
+.home .polb li:nth-child(2) {
+  background-color: var(--main-color-blue);
+  border-color: var(--main-color-blue);
+}
 /* End Home */
