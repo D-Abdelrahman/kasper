@@ -6,7 +6,7 @@
   margin: 0;
   padding: 0;
   --main-color-blue: #19c8fa;
-  --sec-padding: 60px 0;
+  --sec-padding: 100px 0;
 }
 :root {
   scroll-behavior: smooth;
@@ -81,6 +81,16 @@ h2 + p {
   color: #777;
   margin-bottom: 100px;
 }
+.ground-black60::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -3;
+}
 /* End Global Rules  */
 /* Start Home */
 .home {
@@ -91,14 +101,6 @@ h2 + p {
   z-index: 1;
   color: #fff;
   position: relative;
-}
-.home::before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background-color: rgb(0 0 0 / 0.6);
-  z-index: -3;
 }
 .home header {
   display: flex;
@@ -199,14 +201,7 @@ h2 + p {
   z-index: -2;
 }
 .home .intro::before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  position: absolute;
   background-color: rgb(0 0 0 / 0.3);
-  z-index: -3;
 }
 .home .intro .text {
   max-width: 500px;
@@ -308,4 +303,63 @@ h2 + p {
   }
 }
 /* end serveces */
+/* end features */
+.features {
+  padding: var(--sec-padding);
+  background-image: url(../images/design-features.jpg);
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.features .container {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
+.features img {
+position: relative;
+bottom: -150px;
+}
+.features .text {
+  position: absolute;
+  z-index: 1;
+  
+  width: 50%;
+  background-color: #19c8fa80;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 30px;
+}
+.features .text::before {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.features .text p {
+  text-transform: uppercase;
+  font-size: 25px;
+  margin-bottom: 50px
+}
+.features .text li {
+  margin-bottom: 30px;
+}
+.features .text li i {
+  margin-right: 15px;
+}
+@media (max-width: 767px) {
+  .features img {
+    display: none;
+  }
+  .features .text {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: unset;
+  }
+  .features .container {
+    padding: 0;
+  }
+}
+/* end features */
 
