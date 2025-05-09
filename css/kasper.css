@@ -492,7 +492,7 @@ bottom: -170px;
 .about .main {
   background-image: url(../images/stats.png);
   background-size: contain;
-  margin-top: 300px;
+  margin-top: 350px;
   position: relative;
   padding: 100px 10px;
 }
@@ -504,7 +504,6 @@ bottom: -170px;
   left: 50%;
   transform: translate(-50%, -95%);
   z-index: -1;
-  /* top: -200px; */
   width: 700px;
   max-width: 90%;
 }
@@ -552,3 +551,236 @@ bottom: -170px;
 
 }
 /* end About*/
+/* start rate*/
+.rate {
+  padding-bottom: 100px;
+}
+.rate .container {
+  display: flex;
+  justify-content: space-between;
+}
+.rate .container > div {
+  width: 45%;
+}
+.rate h3 {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  font-weight: normal;
+}
+.rate h3 + p {
+  text-align: center;
+  margin-bottom: 70px;
+  color: #777;
+  line-height: 2;
+}
+.rate .clinet {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 40px;
+}
+.rate .clinet img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.rate .clinet .text {
+  border-bottom: 1px solid #ccc;
+}
+.rate .clinet .text p {
+  line-height: 1.8;
+}
+.rate .clinet .text span{
+  display: block;
+  color: #777;
+  text-align: right;
+  padding: 10px 0;
+  font-size: 15px;
+}
+.rate .testimonials .polb {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.rate .testimonials .polb li {
+  width: 15px;
+  height: 15px;
+  margin-left: 10px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+}
+.rate .testimonials .polb li:nth-child(2) {
+  background-color: var(--main-color-blue);
+  border-color: var(--main-color-blue);
+}
+.rate .skills .lang {
+  margin-bottom: 50px;
+}
+.rate .skills .lang span {
+  text-transform: uppercase;
+}
+.rate .skills .lang .ratio {
+  margin-top: 15px;
+  background-image: linear-gradient(to right, var(--main-color-blue) 90%, #dedadc 90%);
+  width: 100%;
+  height: 30px;
+  position: relative;
+}
+.rate .skills .lang .ratio::before {
+  content: "90%";
+  position: absolute;
+  background-color: #000;
+  color: #fff;
+  padding: 4px;
+  border-radius: 4px;
+  margin-left: 90%;
+  top: -40px;
+  transform: translateX(-50%);
+}
+.rate .skills .lang .ratio::after {
+  content: "";
+  position: absolute;
+  margin-left: 90%;
+  top: -15px;
+  transform: translateX(-50%);
+  border: 10px solid;
+  border-color: #000 transparent transparent;
+}
+.rate .skills .lang:nth-child(2) .ratio {
+    background-image: linear-gradient(to right, var(--main-color-blue) 85%, #dedadc 85%);
+}
+.rate .skills .lang:nth-child(2) .ratio::before {
+  content: "85%";
+}
+.rate .skills .lang:nth-child(2) .ratio::before,
+.rate .skills .lang:nth-child(2) .ratio::after {
+  margin-left: 85%;
+}
+.rate .skills .lang:nth-child(3) .ratio {
+    background-image: linear-gradient(to right, var(--main-color-blue) 80%, #dedadc 80%);
+}
+.rate .skills .lang:nth-child(3) .ratio::before {
+  content: "80%";
+}
+.rate .skills .lang:nth-child(3) .ratio::before,
+.rate .skills .lang:nth-child(3) .ratio::after {
+  margin-left: 80%;
+}
+@media (max-width:991px) {
+  .rate .container {
+    flex-direction: column;
+    gap: 50px;
+  }
+  .rate .container > div {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+    .rate .clinet {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    text-align: center;
+  }
+}
+/* end rate */
+/* start quote*/
+.quote {
+  padding: var(--sec-padding);
+  background-image: url(../images/quote.jpg);
+  background-size: cover;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+.quote::before {
+  background-color: rgb(0 0 0 / 0.8);
+}
+.quote q {
+  margin-bottom: 30px;
+  font-size: 30px;
+  display: block;
+}
+/* end quote*/
+/* start pricing */
+.pricing {
+  padding: var(--sec-padding);
+  text-align: center;
+}
+.pricing .prices {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+}
+.pricing .prices .box {
+  background-color: #fcfcfc;
+  border-top: 1px solid var(--main-color-blue);
+  text-align: center;
+  
+}
+.pricing .prices .box li {
+  padding: 20px;
+}
+.pricing .prices .box li:nth-child(2) {
+  border-top: 1px solid var(--main-color-blue);
+  border-bottom: 1px solid var(--main-color-blue);
+  padding: 0;
+}
+.pricing .prices .box h3 {
+  font-weight: normal;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.pricing .prices .box h3 + span {
+  font-weight: bold;
+  font-size: 60px;
+  position: relative;
+}
+.pricing .prices .box h3 + span::before {
+  content: "$";
+  font-size: 25px;
+  font-weight: normal;
+  position: absolute;
+  left: -30px;
+}
+.pricing .prices .box h3 + span::after {
+  content: "/Mo";
+  font-size: 18px;
+  /* font-weight: normal; */
+  position: absolute;
+  bottom: 10px;
+  right: -50px;
+}
+.pricing .prices .box li:nth-child(2) span {
+  display: block;
+  padding: 20px;
+  width: fit-content;
+  margin: auto;
+  border-bottom: 1px solid var(--main-color-blue);
+}
+.pricing .prices .box li:nth-child(2) span:last-child {
+  border: none;
+}
+.pricing .prices .box a {
+  border: 1px solid var(--main-color-blue);
+  padding: 20px;
+  display: inline-block;
+  text-decoration: none;
+
+}
+.pricing p:last-of-type {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+.pricing .container > a {
+  display: inline-block;
+  background-color: var(--main-color-blue);
+  color: white;
+  padding: 20px 30px;
+  text-decoration: none;
+}
+/* end pricing */
